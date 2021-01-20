@@ -13,7 +13,7 @@ Olimpia Milano - Cantù | 55 - 60 -->
 <?php
 
 $matches = [ //PRIMO LIVELLO
-  "tappa1" => [ //SECONDO LIVELLO
+  "tappa" => [ //SECONDO LIVELLO
     "partita1" => [ //TERZO LIVELLO
       "squadraDiCasa" => "Olimpia Milano",
       "squadraOspite" => "Cantù",
@@ -39,35 +39,35 @@ $matches = [ //PRIMO LIVELLO
       "puntiOspite" => 200,
     ],
   ],
-  "tappa2" => [ //SECONDO LIVELLO
+  "tappa" => [ //SECONDO LIVELLO
     "partita1" => [ //TERZO LIVELLO
       "squadraDiCasa" => "Olimpia Milano",
-      "squadraOspite" => "Lakers",
+      "squadraOspite" => "Cantù",
       "puntiCasa" => 55,
       "puntiOspite" => 60,
     ],
     "partita2" => [ //TERZO LIVELLO
       "squadraDiCasa" => "Virtus Bologna",
-      "squadraOspite" => "Victoria Libertas",
+      "squadraOspite" => "Fortitudo Bologna",
       "puntiCasa" => 102,
       "puntiOspite" => 30,
     ],
     "partita3" => [ //TERZO LIVELLO
       "squadraDiCasa" => "Pallacanestro Varese",
-      "squadraOspite" => "Fortitudo Bologna",
+      "squadraOspite" => "Victoria Libertas",
       "puntiCasa" => 56,
       "puntiOspite" => 90,
     ],
     "partita4" => [ //TERZO LIVELLO
       "squadraDiCasa" => "Maremola",
-      "squadraOspite" => "Cantù",
+      "squadraOspite" => "Lakers",
       "puntiCasa" => 100,
       "puntiOspite" => 200,
     ],
   ],
 ];
 
-var_dump($matches);
+// var_dump($matches);
 ?>
 
 
@@ -82,10 +82,10 @@ var_dump($matches);
     <h2>Tappa UNO</h2>
     <p>
       <?php
-      // for ($i=0; $i < count($matches) ; $i++) {
-      //   echo $matches["tappa1"]["partita1"]["squadraDiCasa"];
-      // };
-      // ?>
+      for ($i=0; $i < count($matches) ; $i++) {
+        echo $matches["tappa"];
+      }
+      ?>
   </p>
     <h2>Tappa DUE</h2>
     <p></p>
