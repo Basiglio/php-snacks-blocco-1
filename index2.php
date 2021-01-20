@@ -13,17 +13,22 @@
 
 $name = $_GET["name"];
 $mail = $_GET["mail"];
-$age = intval($_GET["age"]);
+$age = $_GET["age"];
 
 if (strlen($name) > 3) {
   if (strpos($mail, "@") == false || strpos($mail, ".") == false)   {
     $result = "Accesso Negato";
   } else {
-    $result = "Accesso Consentito";
+    if (is_numeric($age) == true) {
+      $result = "Accesso Consentito";
+    } else {
+      $result = "Accesso Negato";
+    }
   }
 } else {
   $result = "Accesso Negato";
 }
+
 
 
 
