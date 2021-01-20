@@ -13,7 +13,20 @@
 
 $name = $_GET["name"];
 $mail = $_GET["mail"];
-$age = $_GET["age"];
+$age = intval($_GET["age"]);
+
+if (strlen($name) > 3) {
+  if (strpos($mail, "@") == false || strpos($mail, ".") == false)   {
+    $result = "Accesso Negato";
+  } else {
+    $result = "Accesso Consentito";
+  }
+} else {
+  $result = "Accesso Negato";
+}
+
+
+
 ?>
 
 
@@ -24,9 +37,9 @@ $age = $_GET["age"];
     <title></title>
   </head>
   <body>
-    <h1>i tuoi dati inseriti</h1>
+    <h1>VERIFICA ACCESSO</h1>
     <p>
-      <?php echo $name . "<br>" . $mail . "<br> " . $age ?>
+      <?php echo $result ?>
     </p>
   </body>
 </html>
