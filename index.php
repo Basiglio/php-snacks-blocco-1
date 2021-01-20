@@ -13,57 +13,35 @@ Olimpia Milano - Cantù | 55 - 60 -->
 <?php
 
 $matches = [ //PRIMO LIVELLO
-  "tappa" => [ //SECONDO LIVELLO
-    "partita1" => [ //TERZO LIVELLO
-      "squadraDiCasa" => "Olimpia Milano",
-      "squadraOspite" => "Cantù",
-      "puntiCasa" => 55,
-      "puntiOspite" => 60,
-    ],
-    "partita2" => [ //TERZO LIVELLO
-      "squadraDiCasa" => "Virtus Bologna",
-      "squadraOspite" => "Fortitudo Bologna",
-      "puntiCasa" => 102,
-      "puntiOspite" => 30,
-    ],
-    "partita3" => [ //TERZO LIVELLO
-      "squadraDiCasa" => "Pallacanestro Varese",
-      "squadraOspite" => "Victoria Libertas",
-      "puntiCasa" => 56,
-      "puntiOspite" => 90,
-    ],
-    "partita4" => [ //TERZO LIVELLO
-      "squadraDiCasa" => "Maremola",
-      "squadraOspite" => "Lakers",
-      "puntiCasa" => 100,
-      "puntiOspite" => 200,
-    ],
+  [// SECONDO LIVELLO
+    "squadraDiCasa" => "Milano",
+    "squadraOspite" => "Cantù",
+    "puntiCasa" => 55,
+    "puntiOspite" => 60,
   ],
-  "tappa" => [ //SECONDO LIVELLO
-    "partita1" => [ //TERZO LIVELLO
-      "squadraDiCasa" => "Olimpia Milano",
-      "squadraOspite" => "Cantù",
-      "puntiCasa" => 55,
-      "puntiOspite" => 60,
-    ],
-    "partita2" => [ //TERZO LIVELLO
-      "squadraDiCasa" => "Virtus Bologna",
-      "squadraOspite" => "Fortitudo Bologna",
-      "puntiCasa" => 102,
-      "puntiOspite" => 30,
-    ],
-    "partita3" => [ //TERZO LIVELLO
-      "squadraDiCasa" => "Pallacanestro Varese",
-      "squadraOspite" => "Victoria Libertas",
-      "puntiCasa" => 56,
-      "puntiOspite" => 90,
-    ],
-    "partita4" => [ //TERZO LIVELLO
-      "squadraDiCasa" => "Maremola",
-      "squadraOspite" => "Lakers",
-      "puntiCasa" => 100,
-      "puntiOspite" => 200,
-    ],
+  [
+    "squadraDiCasa" => "Roma",
+    "squadraOspite" => "Firenze",
+    "puntiCasa" => 102,
+    "puntiOspite" => 85,
+  ],
+  [
+    "squadraDiCasa" => "Torino",
+    "squadraOspite" => "Livorno",
+    "puntiCasa" => 200,
+    "puntiOspite" => 40,
+  ],
+  [
+    "squadraDiCasa" => "Bologna",
+    "squadraOspite" => "Catania",
+    "puntiCasa" => 95,
+    "puntiOspite" => 20,
+  ],
+  [
+    "squadraDiCasa" => "Ostia",
+    "squadraOspite" => "Napoli",
+    "puntiCasa" => 59,
+    "puntiOspite" => 101,
   ],
 ];
 
@@ -83,11 +61,9 @@ $matches = [ //PRIMO LIVELLO
     <p>
       <?php
       for ($i=0; $i < count($matches) ; $i++) {
-        echo $matches["tappa"];
+        echo $matches[$i]["squadraDiCasa"] . " " . "-" . " " . $matches[$i]["squadraOspite"] . " " . "|" . " " . $matches[$i]["puntiCasa"] . " " . "-" . " " . $matches[$i]["puntiOspite"] . "<br>";
       }
       ?>
   </p>
-    <h2>Tappa DUE</h2>
-    <p></p>
   </body>
 </html>
